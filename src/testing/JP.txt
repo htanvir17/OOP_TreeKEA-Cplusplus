@@ -1,0 +1,1388 @@
+-------------------------------------------------------------------------------
+1. JUEGO DE PRUEBAS
+-------------------------------------------------------------------------------
+
+Entrada comentada:
+------------------
+Declaro un almacen con 5 salas.
+5
+Leo en preorden las salas.
+4 3 1 0 0 2 0 0 5 0 0   
+Declaro las dimensiones de las salas.
+3 3
+2 2
+3 4 
+2 1
+2 2
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+escribir 5
+Pongo 2 unidades de un producto llamado AAAA.
+poner_items 3 AAAA 2
+Quiero dar de baja del sistema el prducto AAAA.
+quitar_prod AAAA
+Doy de alta en el sistema el producto 2m00. 
+poner_prod 2m00
+Doy de baja en el sistema el producto 2m00.
+quitar_prod 2m00
+Consulto la cantidad de producto que tiene 89bb.
+consultar_prod 89bb
+Distribuiré el producto AAAA con 10 unidades.
+distribuir AAAA 10
+Doy de alta en el sistema el producto AAAA.
+poner_prod AAAA
+Doy de alta en el sistema el producto BBBB.
+poner_prod BBBB
+Pongo 5 unidades de un producto llamado AAAA en la sala 3.
+poner_items 3 AAAA 5
+Pongo 5 unidades de un producto llamado BBBB en la sala 3.
+poner_items 3 BBBB 5
+Pongo 4 unidades de un producto llamado BBBB en la sala 1.
+poner_items 1 BBBB 4
+Pongo 5 unidades de un producto llamado BBBB en la sala 5.
+poner_items 2 BBBB 5
+Doy de alta en el sistema el producto 2m00.
+poner_prod 2m00
+Doy de alta en el sistema el producto bb89.
+poner_prod bb89
+Distribuiré el producto 2m00 con 10 unidades. 
+distribuir 2m00 10
+Distribuiré el producto bb89 con 9 unidades.
+distribuir bb89 9
+Pido el informe de cada producto al sistema.
+inventario
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 1 3
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 5 2 2
+Elimino 8 unidades de un producto llamado BBBB en la sala 1.
+quitar_items 1 BBBB 8
+Elimino 2 unidades de un producto llamado BBBB en la sala 2.
+quitar_items 2 BBBB 2
+Elimino 3 unidades de un producto llamado AAAA en la sala 3.
+quitar_items 3 AAAA 3
+Elimino 3 unidades de un producto llamado BBBB en la sala 3.
+quitar_items 3 BBBB 3
+Ordeno a escribir el contenido de la sala 1, 2 y 3.
+escribir 1
+escribir 2
+escribir 3
+Ordeno a compactar la sala 1.
+compactar 1
+Ordeno a compactar la sala 3.
+compactar 3
+Elimino 5 unidades de un producto llamado 2m00 en la sala 5.
+quitar_items 5 2m00 5
+Ordeno a reorganizar la sala 1.
+reorganizar 1
+Ordeno a reorganizar la sala 3.
+reorganizar 3
+Consulto la cantidad de producto de 2m00.
+consultar_prod 2m00
+Consulto la cantidad de producto de 2m00.
+consultar_prod AAAA
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 2 2
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 2 2 1
+Ordeno a redimensionar la sala 1.
+redimensionar 1 2 2
+Ordeno a redimensionar la sala 2.
+redimensionar 2 2 1
+Ordeno a redimensionar la sala 3.
+redimensionar 3 2 2
+Ordeno a redimensionar la sala 3.
+redimensionar 3 3 2
+Ordeno a redimensionar la sala 4.
+redimensionar 4 1 2
+Pido el informe de cada producto al sistema.
+inventario
+Elimino 10 unidades de un producto llamado bb89 en la sala 1.
+quitar_items 1 bb89 10
+Consulto la cantidad de producto de bb89.
+consultar_prod bb89
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 1 1
+Ordeno a redimensionar la sala 1.
+redimensionar 1 1 1
+Doy de baja en el sistema el producto bb89.
+quitar_prod bb89
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+escribir 5
+Pido el informe de cada producto al sistema.
+inventario
+El proceso se acaba.
+fin
+
+Salida comentada: 
+-----------------
+Muestro el contenido de 5 salas.
+escribir 1
+  NULL NULL NULL
+  NULL NULL NULL
+  NULL NULL NULL
+  0
+escribir 2
+  NULL NULL
+  NULL NULL
+  0
+escribir 3
+  NULL NULL NULL NULL
+  NULL NULL NULL NULL
+  NULL NULL NULL NULL
+  0
+escribir 4
+  NULL
+  NULL
+  0
+escribir 5
+  NULL NULL
+  NULL NULL
+  0
+Queria poner dos unidades del producto AAAA pero ese producto no existe. Por tanto, es un error.
+poner_items 3 AAAA 2
+  error
+No puedo dar de de baja el producto AAAA del sistema porque no existe.
+quitar_prod AAAA
+  error
+Incorporo el producto 2m00 en el sistema.
+poner_prod 2m00
+El producto 2m00 queda eliminado del sistema.
+quitar_prod 2m00
+No puedo consultar la cantidad del producto 89bb porque ese producto no existe. Por tanto, es un error. 
+consultar_prod 89bb
+  error
+No se puede distribuir el producto AAAA porque no existe. Por tanto, es un error.
+distribuir AAAA 10
+  error
+Incorporo el producto AAAA en el sistema.
+poner_prod AAAA
+Incorporo el producto BBBB en el sistema.
+poner_prod BBBB
+Pongo 5 unidades del producto AAAA en la sala 3. Caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 0.
+poner_items 3 AAAA 5
+  0
+Pongo 5 unidades del producto BBBB en la sala 3. Caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 0.
+poner_items 3 BBBB 5
+  0
+Pongo 4 unidades del producto BBBB en la sala 1. Caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 0.
+poner_items 1 BBBB 4
+  0
+Pongo 5 unidades del producto BBBB en la sala 2. No caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 1.
+poner_items 2 BBBB 5
+  1
+Incorporo el producto 2m00 en el sistema.
+poner_prod 2m00
+Incorporo el producto bb89 en el sistema.
+poner_prod bb89
+Distribuyo el producto 2m00 empezando por la sala 4, 3, 5, 1 y 2. Devuelvo la cantidad que no se ha podido distribuir, en este caso es 1.
+distribuir 2m00 10
+  1
+Distribuyo el producto bb89 empezando por la sala 4, 3, 5, 1 y 2. Devuelvo la cantidad que no se ha podido distribuir, en este caso es 6.
+distribuir bb89 9
+  6
+Imprimo el informe de cada producto con su identificador y la cantidad que hay en el sistema. 
+inventario
+  2m00 9
+  AAAA 5
+  BBBB 13
+  bb89 3
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 1 3
+  NULL
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 5 2 2
+  2m00
+Elimino 8 unidades del producto BBBB de la sala 1. No se ha eliminado todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 4.
+quitar_items 1 BBBB 8
+  4
+Elimino 2 unidades del producto BBBB de la sala 2. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 2 BBBB 2
+  0
+Elimino 3 unidades del producto AAAA de la sala 3. se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 3 AAAA 3
+  0
+Elimino 3 unidades del producto BBBB de la sala 3. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 3 BBBB 3
+  0
+Muestro el contenido de sala 1,2 y 3.
+escribir 1
+  bb89 bb89 NULL
+  NULL 2m00 bb89
+  NULL NULL NULL
+  4
+  2m00 1
+  bb89 3
+escribir 2
+  BBBB BBBB
+  NULL NULL
+  2
+  BBBB 2
+escribir 3
+  BBBB BBBB 2m00 2m00
+  AAAA NULL NULL NULL
+  NULL NULL NULL AAAA
+  6
+  2m00 2
+  AAAA 2
+  BBBB 2
+La sala 1 queda compactada.
+compactar 1
+La sala 2 queda compactada.
+compactar 3
+Elimino 5 unidades del producto 2m00 de la sala 5. No se ha eliminado todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 1.
+quitar_items 5 2m00 5
+  1
+La sala 1 queda reorganizada.
+reorganizar 1
+La sala 3 queda reorganizada.
+reorganizar 3
+Devuelvo la cantidad de producto de 2m00.
+consultar_prod 2m00
+  5
+Devuelvo la cantidad de producto de 2m00.
+consultar_prod AAAA
+  2
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 2 2
+  NULL
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 2 2 1
+  NULL
+La sala 1 queda redimensionada.
+redimensionar 1 2 2
+La sala 2 queda redimensionada.
+redimensionar 2 2 1
+No es posible redimensionar la sala 3 con la dimensión 2x2. Por tanto, es error.
+redimensionar 3 2 2
+  error
+La sala 3 queda redimensionada.
+redimensionar 3 3 2
+La sala 4 queda redimensionada.
+redimensionar 4 1 2
+Imprimo el informe de cada producto con su identificador y la cantidad que hay en el sistema. 
+inventario
+  2m00 5
+  AAAA 2
+  BBBB 4
+  bb89 3
+Elimino 10 unidades del producto bb89 de la sala 1. No se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 7.
+quitar_items 1 bb89 10
+  7
+Devuelvo la cantidad de producto de 2m00.
+consultar_prod bb89
+  0
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 1 1
+  NULL
+La sala 1 queda redimensionada.
+redimensionar 1 1 1
+El producto 2m00 queda eliminado del sistema.
+quitar_prod bb89
+Muestro el contenido de las salas.
+escribir 1
+  2m00
+  1
+  2m00 1
+escribir 2
+  BBBB
+  BBBB
+  2
+  BBBB 2
+escribir 3
+  BBBB BBBB
+  AAAA AAAA
+  2m00 2m00
+  6
+  2m00 2
+  AAAA 2
+  BBBB 2
+escribir 4
+  2m00 2m00
+  2
+  2m00 2
+escribir 5
+  NULL NULL
+  NULL NULL
+  0
+Imprimo el informe de cada producto con su identificador y la cantidad que hay en el sistema. 
+inventario
+  2m00 5
+  AAAA 2
+  BBBB 4
+Se acaba el proceso.
+fin
+
+Entrada sin comentar:
+---------------------
+5
+4 3 1 0 0 2 0 0 5 0 0
+3 3
+2 2
+3 4
+2 1
+2 2
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+escribir 5
+poner_items 3 AAAA 2
+quitar_prod AAAA
+poner_prod 2m00
+quitar_prod 2m00
+consultar_prod 89bb
+distribuir AAAA 10
+poner_prod AAAA
+poner_prod BBBB
+poner_items 3 AAAA 5
+poner_items 3 BBBB 5
+poner_items 1 BBBB 4
+poner_items 2 BBBB 5
+poner_prod 2m00
+poner_prod bb89
+distribuir 2m00 10
+distribuir bb89 9
+inventario
+consultar_pos 1 1 3
+consultar_pos 5 2 2
+quitar_items 1 BBBB 8
+quitar_items 2 BBBB 2
+quitar_items 3 AAAA 3
+quitar_items 3 BBBB 3
+escribir 1
+escribir 2
+escribir 3
+compactar 1
+compactar 3
+quitar_items 5 2m00 5
+reorganizar 1
+reorganizar 3
+consultar_prod 2m00
+consultar_prod AAAA
+consultar_pos 1 2 2
+consultar_pos 2 2 1
+redimensionar 1 2 2
+redimensionar 2 2 1
+redimensionar 3 2 2
+redimensionar 3 3 2
+redimensionar 4 1 2
+inventario
+quitar_items 1 bb89 10
+consultar_prod bb89
+consultar_pos 1 1 1
+redimensionar 1 1 1
+quitar_prod bb89
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+escribir 5
+inventario
+fin
+
+Salida sin comentar:
+---------------------
+escribir 1
+  NULL NULL NULL
+  NULL NULL NULL
+  NULL NULL NULL
+  0
+escribir 2
+  NULL NULL
+  NULL NULL
+  0
+escribir 3
+  NULL NULL NULL NULL
+  NULL NULL NULL NULL
+  NULL NULL NULL NULL
+  0
+escribir 4
+  NULL
+  NULL
+  0
+escribir 5
+  NULL NULL
+  NULL NULL
+  0
+poner_items 3 AAAA 2
+  error
+quitar_prod AAAA
+  error
+poner_prod 2m00
+quitar_prod 2m00
+consultar_prod 89bb
+  error
+distribuir AAAA 10
+  error
+poner_prod AAAA
+poner_prod BBBB
+poner_items 3 AAAA 5
+  0
+poner_items 3 BBBB 5
+  0
+poner_items 1 BBBB 4
+  0
+poner_items 2 BBBB 5
+  1
+poner_prod 2m00
+poner_prod bb89
+distribuir 2m00 10
+  1
+distribuir bb89 9
+  6
+inventario
+  2m00 9
+  AAAA 5
+  BBBB 13
+  bb89 3
+consultar_pos 1 1 3
+  NULL
+consultar_pos 5 2 2
+  2m00
+quitar_items 1 BBBB 8
+  4
+quitar_items 2 BBBB 2
+  0
+quitar_items 3 AAAA 3
+  0
+quitar_items 3 BBBB 3
+  0
+escribir 1
+  bb89 bb89 NULL
+  NULL 2m00 bb89
+  NULL NULL NULL
+  4
+  2m00 1
+  bb89 3
+escribir 2
+  BBBB BBBB
+  NULL NULL
+  2
+  BBBB 2
+escribir 3
+  BBBB BBBB 2m00 2m00
+  AAAA NULL NULL NULL
+  NULL NULL NULL AAAA
+  6
+  2m00 2
+  AAAA 2
+  BBBB 2
+compactar 1
+compactar 3
+quitar_items 5 2m00 5
+  1
+reorganizar 1
+reorganizar 3
+consultar_prod 2m00
+  5
+consultar_prod AAAA
+  2
+consultar_pos 1 2 2
+  NULL
+consultar_pos 2 2 1
+  NULL
+redimensionar 1 2 2
+redimensionar 2 2 1
+redimensionar 3 2 2
+  error
+redimensionar 3 3 2
+redimensionar 4 1 2
+inventario
+  2m00 5
+  AAAA 2
+  BBBB 4
+  bb89 3
+quitar_items 1 bb89 10
+  7
+consultar_prod bb89
+  0
+consultar_pos 1 1 1
+  NULL
+redimensionar 1 1 1
+quitar_prod bb89
+escribir 1
+  2m00
+  1
+  2m00 1
+escribir 2
+  BBBB
+  BBBB
+  2
+  BBBB 2
+escribir 3
+  BBBB BBBB
+  AAAA AAAA
+  2m00 2m00
+  6
+  2m00 2
+  AAAA 2
+  BBBB 2
+escribir 4
+  2m00 2m00
+  2
+  2m00 2
+escribir 5
+  NULL NULL
+  NULL NULL
+  0
+inventario
+  2m00 5
+  AAAA 2
+  BBBB 4
+fin
+
+
+-------------------------------------------------------------------------------
+2. JUEGO DE PRUEBAS
+-------------------------------------------------------------------------------
+Entrada comentada:
+------------------
+Declaro un almacen con 4 salas.
+4
+Leo en preorden las salas.
+1 2 4 0 0 0 3 0 0
+Declaro las dimensiones de las salas.
+2 2
+2 2
+3 3
+2 3
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+Doy de alta en el sistema el producto AAAA.
+poner_prod AAAA
+Distribuiré el producto AAAA con 25 unidades.
+distribuir AAAA 25
+Pongo 15 unidades de un producto llamado BBBB en la sala 1.
+poner_items 1 BBBB 15
+Doy de baja en el sistema el producto AAAA.
+quitar_prod AAAA
+Elimino 2 unidades de un producto llamado AAAA en la sala 1.
+quitar_items 1 AAAA 2
+Elimino 3 unidades de un producto llamado AAAA en la sala 2.
+quitar_items 2 AAAA 3
+Elimino 7 unidades de un producto llamado AAAA en la sala 3.
+quitar_items 3 AAAA 7
+Elimino 2 unidades de un producto llamado AAAA en la sala 4.
+quitar_items 4 AAAA 2
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+Pido el informe de cada producto al sistema.
+inventario
+Doy de alta en el sistema el producto BBBB.
+poner_prod BBBB
+Doy de alta en el sistema el producto CCCC.
+poner_prod CCCC
+Doy de alta en el sistema el producto 0000.
+poner_prod 0000
+Doy de alta en el sistema el producto ZZZZ.
+poner_prod ZZZZ
+Pongo 5 unidades de un producto llamado BBBB en la sala 1.
+poner_items 1 BBBB 5
+Pongo 2 unidades de un producto llamado ZZZZ en la sala 2.
+poner_items 2 ZZZZ 2
+Pongo 2 unidades de un producto llamado 0000 en la sala 2.
+poner_items 2 0000 2
+Pongo 4 unidades de un producto llamado CCCC en la sala 3.
+poner_items 3 CCCC 4
+Pongo 1 unidad de un producto llamado ZZZZ en la sala 3.
+poner_items 3 ZZZZ 1
+Pongo 10 unidades de un producto llamado 0000 en la sala 3.
+poner_items 3 0000 10
+Pongo 10 unidades de un producto llamado 0000 en la sala 4.
+poner_items 4 0000 10
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+Ordeno a reorganizar la sala 1.
+reorganizar 1
+Ordeno a reorganizar la sala 2.
+reorganizar 2
+Ordeno a reorganizar la sala 3.
+reorganizar 3
+Ordeno a reorganizar la sala 4.
+reorganizar 4
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+Pido el informe de cada producto al sistema.
+inventario
+Doy de baja en el sistema el producto AAAA.
+quitar_prod AAAA
+Doy de baja en el sistema el producto 0000.
+quitar_prod 0000
+Consulto la cantidad de producto de ZZZZ.
+consultar_prod ZZZZ
+Consulto la cantidad de producto de CCCC.
+consultar_prod CCCC
+Elimino 1 unidad de un producto llamado AAAA en la sala 1.
+quitar_items 1 AAAA 1
+Elimino 1 unidad de un producto llamado BBBB en la sala 1.
+quitar_items 1 BBBB 1
+Elimino 5 unidades de un producto llamado AAAA en la sala 2.
+quitar_items 2 AAAA 5
+Elimino 1 unidad de un producto llamado ZZZZ en la sala 2.
+quitar_items 2 ZZZZ 1
+Elimino 1 unidad de un producto llamado 0000 en la sala 3.
+quitar_items 3 0000 1
+Elimino 1 unidad de un producto llamado AAAA en la sala 3.
+quitar_items 3 AAAA 1
+Elimino 10 unidades de un producto llamado CCCC en la sala 3.
+quitar_items 3 CCCC 10
+Elimino 5 unidades de un producto llamado 0000 en la sala 4.
+quitar_items 4 0000 5
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 1 1
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 2 2 1
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 3 1 3
+Consulto un producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 4 1 2
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+Doy de baja en el sistema el producto CCCC.
+quitar_prod CCCC
+Ordeno a compactar la sala 1.
+compactar 1
+Ordeno a compactar la sala 2.
+compactar 2
+Ordeno a redimensionar la sala 1.
+redimensionar 1 2 1
+Ordeno a redimensionar la sala 2.
+redimensionar 2 1 2
+Ordeno a redimensionar la sala 3.
+redimensionar 3 1 1
+Ordeno a redimensionar la sala 3.
+redimensionar 3 1 3
+Ordeno a redimensionar la sala 4.
+redimensionar 4 2 1
+Pido el informe de cada producto al sistema.
+inventario
+Elimino 2 unidades de un producto llamado AAAA en la sala 1.
+quitar_items 1 AAAA 2
+Elimino 2 unidades de un producto llamado BBBB en la sala 1.
+quitar_items 1 BBBB 2
+Elimino 3 unidades de un producto llamado 0000 en la sala 2.
+quitar_items 2 0000 3
+Elimino 1 unidad de un producto llamado ZZZZ en la sala 2.
+quitar_items 2 ZZZZ 1
+Elimino 1 unidad de un producto llamado 0000 en la sala 3.
+quitar_items 3 0000 1
+Elimino 5 unidades de un producto llamado AAAA en la sala 3.
+quitar_items 3 AAAA 5
+Elimino 10 unidades de un producto llamado CCCC en la sala 3.
+quitar_items 3 CCCC 10
+Elimino 8 unidades de un producto llamado ZZZZ en la sala 3.
+quitar_items 3 ZZZZ 8
+Elimino 2 unidades de un producto llamado AAAA en la sala 4.
+quitar_items 4 AAAA 2
+Ordeno a escribir el contenido de las salas.
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+Doy de baja en el sistema el producto 0000.
+quitar_prod 0000
+Doy de baja en el sistema el producto AAAA.
+quitar_prod AAAA
+Doy de baja en el sistema el producto BBBB.
+quitar_prod BBBB
+Doy de baja en el sistema el producto ZZZZ.
+quitar_prod ZZZZ
+Pido el informe de cada producto al sistema.
+inventario
+El proceso se acaba.
+fin
+
+Salida comentada: 
+-----------------
+Muestro el contenido de 4 salas.
+escribir 1
+  NULL NULL
+  NULL NULL
+  0
+escribir 2
+  NULL NULL
+  NULL NULL
+  0
+escribir 3
+  NULL NULL NULL
+  NULL NULL NULL
+  NULL NULL NULL
+  0
+escribir 4
+  NULL NULL NULL
+  NULL NULL NULL
+  0
+Incorporo el producto AAAA en el sistema.
+poner_prod AAAA
+Distribuyo el producto 2m00 empezando por la sala 1, 2, 3 Y 4. Devuelvo la cantidad que no se ha podido distribuir, en este caso es 4.
+distribuir AAAA 25
+  4
+Queria poner 15 unidades del producto BBBB pero ese producto no existe. Por tanto, es un error.
+poner_items 1 BBBB 15
+  error
+No puedo dar de de baja el producto AAAA del sistema porque tiene cantidad de producto en el almácen.
+quitar_prod AAAA
+  error
+Elimino 2 unidades del producto AAAA de la sala 1. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 1 AAAA 2
+  0
+Elimino 3 unidades del producto AAAA de la sala 2. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 2 AAAA 3
+  0
+Elimino 7 unidades del producto AAAA de la sala 3. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 3 AAAA 7
+  0
+Elimino 4 unidades del producto AAAA de la sala 4. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 4 AAAA 2
+  0
+Muestro el contenido de 4 salas.
+escribir 1
+  AAAA AAAA
+  NULL NULL
+  2
+  AAAA 2
+escribir 2
+  NULL AAAA
+  NULL NULL
+  1
+  AAAA 1
+escribir 3
+  NULL AAAA AAAA
+  NULL NULL NULL
+  NULL NULL NULL
+  2
+  AAAA 2
+escribir 4
+  AAAA NULL NULL
+  NULL NULL AAAA
+  2
+  AAAA 2
+Imprimo el informe de cada producto con su identificador y la cantidad que hay en el sistema. 
+inventario
+  AAAA 7
+Incorporo el producto BBBB en el sistema.
+poner_prod BBBB
+Incorporo el producto CCCC en el sistema.
+poner_prod CCCC
+Incorporo el producto 0000 en el sistema.
+poner_prod 0000
+Incorporo el producto ZZZZ en el sistema.
+poner_prod ZZZZ
+Pongo 5 unidades del producto BBBB en la sala 1. No caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 3.
+poner_items 1 BBBB 5
+  3
+Pongo 2 unidades del producto ZZZZ en la sala 2. Caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 0.
+poner_items 2 ZZZZ 2
+  0
+Pongo 2 unidades del producto 0000 en la sala 2. No caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 1.
+poner_items 2 0000 2
+  1
+Pongo 4 unidades del producto CCCC en la sala 3. Caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 0.
+poner_items 3 CCCC 4
+  0
+Pongo 1 unidades del producto ZZZZ en la sala 3. Caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 0.
+poner_items 3 ZZZZ 1
+  0
+Pongo 10 unidades del producto 0000 en la sala 3. No caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 8.
+poner_items 3 0000 10
+  8
+Pongo 10 unidades del producto 0000 en la sala 4. Caben todas las cantidades. Devuelvo la cantidad de productos que no han cabido en la sala, en este caso es 6.
+poner_items 4 0000 10
+  6
+Muestro el contenido de 4 salas.
+escribir 1
+  AAAA AAAA
+  BBBB BBBB
+  4
+  AAAA 2
+  BBBB 2
+escribir 2
+  0000 AAAA
+  ZZZZ ZZZZ
+  4
+  0000 1
+  AAAA 1
+  ZZZZ 2
+escribir 3
+  0000 AAAA AAAA
+  CCCC ZZZZ 0000
+  CCCC CCCC CCCC
+  9
+  0000 2
+  AAAA 2
+  CCCC 4
+  ZZZZ 1
+escribir 4
+  AAAA 0000 0000
+  0000 0000 AAAA
+  6
+  0000 4
+  AAAA 2
+La sala 1 queda reorganizada.
+reorganizar 1
+La sala  queda reorganizada.
+reorganizar 2
+La sala 3 queda reorganizada.
+reorganizar 3
+La sala 4 queda reorganizada.
+reorganizar 4
+Muestro el contenido de 4 salas.
+escribir 1
+  BBBB BBBB
+  AAAA AAAA
+  4
+  AAAA 2
+  BBBB 2
+escribir 2
+  ZZZZ ZZZZ
+  0000 AAAA
+  4
+  0000 1
+  AAAA 1
+  ZZZZ 2
+escribir 3
+  CCCC CCCC ZZZZ
+  AAAA CCCC CCCC
+  0000 0000 AAAA
+  9
+  0000 2
+  AAAA 2
+  CCCC 4
+  ZZZZ 1
+escribir 4
+  0000 AAAA AAAA
+  0000 0000 0000
+  6
+  0000 4
+  AAAA 2
+Imprimo el informe de cada producto con su identificador y la cantidad que hay en el sistema. 
+inventario
+  0000 7
+  AAAA 7
+  BBBB 2
+  CCCC 4
+  ZZZZ 3
+El producto AAAA no se puede eliminar del sistema porque tiene una cierta cantidad de productos.
+quitar_prod AAAA
+  error
+El producto AAAA no se puede eliminar del sistema porque tiene una cierta cantidad de productos.
+quitar_prod 0000
+  error
+Devuelvo la cantidad de producto de ZZZZ.
+consultar_prod ZZZZ
+  3
+Devuelvo la cantidad de producto de CCCC.
+consultar_prod CCCC
+  4
+Elimino 1 unidad del producto AAAA de la sala 1. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 1 AAAA 1
+  0
+Elimino 1 unidad del producto BBBB de la sala 1. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 1 BBBB 1
+  0
+Elimino 5 unidades del producto AAAA de la sala 2. No se ha eliminado todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 4.
+quitar_items 2 AAAA 5
+  4
+Elimino 1 unidad del producto ZZZZ de la sala 2. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 2 ZZZZ 1
+  0
+Elimino 3 unidades del producto 0000 de la sala 3. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 3 0000 1
+  0
+Elimino 1 unidad del producto AAAA de la sala 3. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 3 AAAA 1
+  0
+Elimino 10 unidades del producto CCCC de la sala 3. No se ha eliminado todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 6.
+quitar_items 3 CCCC 10
+  6
+Elimino 5 unidades del producto 0000 de la sala 4. No se ha eliminado todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 1.
+quitar_items 4 0000 5
+  1
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 1 1 1
+  NULL
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 2 2 1
+  0000
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 3 1 3
+  ZZZZ
+Imprimo el producto que se encuentra en una dich sala con su fila y columna determinada.
+consultar_pos 4 1 2
+  AAAA
+Muestro el contenido de 4 salas.
+escribir 1
+  NULL BBBB
+  NULL AAAA
+  2
+  AAAA 1
+  BBBB 1
+escribir 2
+  NULL ZZZZ
+  0000 NULL
+  2
+  0000 1
+  ZZZZ 1
+escribir 3
+  NULL NULL ZZZZ
+  AAAA NULL NULL
+  NULL 0000 NULL
+  3
+  0000 1
+  AAAA 1
+  ZZZZ 1
+escribir 4
+  NULL AAAA AAAA
+  NULL NULL NULL
+  2
+  AAAA 2
+El producto CCCC queda eliminado del sistema.
+quitar_prod CCCC
+La sala 1 queda compactada.
+compactar 1
+La sala 2 queda compactada.
+compactar 2
+La sala 1 queda redimensionada.
+redimensionar 1 2 1
+La sala 2 queda redimensionada.
+redimensionar 2 1 2
+No es posible redimensionar la sala 3 con la dimensión 1x1. Por tanto, es error.
+redimensionar 3 1 1
+  error
+La sala 3 queda redimensionada.
+redimensionar 3 1 3
+La sala 4 queda redimensionada.
+redimensionar 4 2 1
+Imprimo el informe de cada producto con su identificador y la cantidad que hay en el sistema. 
+inventario
+  0000 2
+  AAAA 4
+  BBBB 1
+  ZZZZ 2
+Elimino 2 unidades del producto AAAA de la sala 1. No se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 1.
+quitar_items 1 AAAA 2
+  1
+Elimino 2 unidades del producto BBBB de la sala 1. No se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 1.
+quitar_items 1 BBBB 2
+  1
+Elimino 3 unidades del producto 0000 de la sala 2. No se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 2.
+quitar_items 2 0000 3
+  2
+Elimino 1 unidad del producto ZZZZ de la sala 2. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 2 ZZZZ 1
+  0
+Elimino 1 unidad del producto 0000 de la sala 3. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 3 0000 1
+  0
+Elimino 5 unidades del producto AAAA de la sala 3. No se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 4.
+quitar_items 3 AAAA 5
+  4
+No se puede eliminar la cantidad del producto CCCC porque ese producto no existe. Por tanto, es un error. 
+quitar_items 3 CCCC 10
+  error
+Elimino 8 unidades del producto ZZZZ de la sala 3. No se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 7.
+quitar_items 3 ZZZZ 8
+  7
+Elimino 2 unidades del producto AAAA de la sala 4. Se ha podido eliminar todas las cantidades. Devuelvo la cantidad de productos que no se han quitado de la sala, en este caso es 0.
+quitar_items 4 AAAA 2
+  0
+Muestro el contenido de 4 salas.
+escribir 1
+  NULL
+  NULL
+  0
+escribir 2
+  NULL NULL
+  0
+escribir 3
+  NULL NULL NULL
+  0
+escribir 4
+  NULL
+  NULL
+  0
+El producto 0000 queda eliminado del sistema.
+quitar_prod 0000
+El producto AAAA queda eliminado del sistema.
+quitar_prod AAAA
+El producto BBBB queda eliminado del sistema.
+quitar_prod BBBB
+El producto ZZZZ queda eliminado del sistema.
+quitar_prod ZZZZ
+Imprimo el informe de cada producto con su identificador y la cantidad que hay en el sistema. 
+inventario
+Se acaba el proceso.
+fin
+
+Entrada sin comentar:
+---------------------
+4
+1 2 4 0 0 0 3 0 0
+2 2
+2 2
+3 3
+2 3
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+poner_prod AAAA
+distribuir AAAA 25
+poner_items 1 BBBB 15
+quitar_prod AAAA
+quitar_items 1 AAAA 2
+quitar_items 2 AAAA 3
+quitar_items 3 AAAA 7
+quitar_items 4 AAAA 2
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+inventario
+poner_prod BBBB
+poner_prod CCCC
+poner_prod 0000
+poner_prod ZZZZ
+poner_items 1 BBBB 5
+poner_items 2 ZZZZ 2
+poner_items 2 0000 2
+poner_items 3 CCCC 4
+poner_items 3 ZZZZ 1
+poner_items 3 0000 10
+poner_items 4 0000 10
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+reorganizar 1
+reorganizar 2
+reorganizar 3
+reorganizar 4
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+inventario
+quitar_prod AAAA
+quitar_prod 0000
+consultar_prod ZZZZ
+consultar_prod CCCC
+quitar_items 1 AAAA 1
+quitar_items 1 BBBB 1
+quitar_items 2 AAAA 5
+quitar_items 2 ZZZZ 1
+quitar_items 3 0000 1
+quitar_items 3 AAAA 1
+quitar_items 3 CCCC 10
+quitar_items 4 0000 5
+consultar_pos 1 1 1
+consultar_pos 2 2 1
+consultar_pos 3 1 3
+consultar_pos 4 1 2
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+quitar_prod CCCC
+compactar 1
+compactar 2
+redimensionar 1 2 1
+redimensionar 2 1 2
+redimensionar 3 1 1
+redimensionar 3 1 3
+redimensionar 4 2 1
+inventario
+quitar_items 1 AAAA 2
+quitar_items 1 BBBB 2
+quitar_items 2 0000 3
+quitar_items 2 ZZZZ 1
+quitar_items 3 0000 1
+quitar_items 3 AAAA 5
+quitar_items 3 CCCC 10
+quitar_items 3 ZZZZ 8
+quitar_items 4 AAAA 2
+escribir 1
+escribir 2
+escribir 3
+escribir 4
+quitar_prod 0000
+quitar_prod AAAA
+quitar_prod BBBB
+quitar_prod ZZZZ
+inventario
+fin
+
+Salida sin comentar:
+---------------------
+escribir 1
+  NULL NULL
+  NULL NULL
+  0
+escribir 2
+  NULL NULL
+  NULL NULL
+  0
+escribir 3
+  NULL NULL NULL
+  NULL NULL NULL
+  NULL NULL NULL
+  0
+escribir 4
+  NULL NULL NULL
+  NULL NULL NULL
+  0
+poner_prod AAAA
+distribuir AAAA 25
+  4
+poner_items 1 BBBB 15
+  error
+quitar_prod AAAA
+  error
+quitar_items 1 AAAA 2
+  0
+quitar_items 2 AAAA 3
+  0
+quitar_items 3 AAAA 7
+  0
+quitar_items 4 AAAA 2
+  0
+escribir 1
+  AAAA AAAA
+  NULL NULL
+  2
+  AAAA 2
+escribir 2
+  NULL AAAA
+  NULL NULL
+  1
+  AAAA 1
+escribir 3
+  NULL AAAA AAAA
+  NULL NULL NULL
+  NULL NULL NULL
+  2
+  AAAA 2
+escribir 4
+  AAAA NULL NULL
+  NULL NULL AAAA
+  2
+  AAAA 2
+inventario
+  AAAA 7
+poner_prod BBBB
+poner_prod CCCC
+poner_prod 0000
+poner_prod ZZZZ
+poner_items 1 BBBB 5
+  3
+poner_items 2 ZZZZ 2
+  0
+poner_items 2 0000 2
+  1
+poner_items 3 CCCC 4
+  0
+poner_items 3 ZZZZ 1
+  0
+poner_items 3 0000 10
+  8
+poner_items 4 0000 10
+  6
+escribir 1
+  AAAA AAAA
+  BBBB BBBB
+  4
+  AAAA 2
+  BBBB 2
+escribir 2
+  0000 AAAA
+  ZZZZ ZZZZ
+  4
+  0000 1
+  AAAA 1
+  ZZZZ 2
+escribir 3
+  0000 AAAA AAAA
+  CCCC ZZZZ 0000
+  CCCC CCCC CCCC
+  9
+  0000 2
+  AAAA 2
+  CCCC 4
+  ZZZZ 1
+escribir 4
+  AAAA 0000 0000
+  0000 0000 AAAA
+  6
+  0000 4
+  AAAA 2
+reorganizar 1
+reorganizar 2
+reorganizar 3
+reorganizar 4
+escribir 1
+  BBBB BBBB
+  AAAA AAAA
+  4
+  AAAA 2
+  BBBB 2
+escribir 2
+  ZZZZ ZZZZ
+  0000 AAAA
+  4
+  0000 1
+  AAAA 1
+  ZZZZ 2
+escribir 3
+  CCCC CCCC ZZZZ
+  AAAA CCCC CCCC
+  0000 0000 AAAA
+  9
+  0000 2
+  AAAA 2
+  CCCC 4
+  ZZZZ 1
+escribir 4
+  0000 AAAA AAAA
+  0000 0000 0000
+  6
+  0000 4
+  AAAA 2
+inventario
+  0000 7
+  AAAA 7
+  BBBB 2
+  CCCC 4
+  ZZZZ 3
+quitar_prod AAAA
+  error
+quitar_prod 0000
+  error
+consultar_prod ZZZZ
+  3
+consultar_prod CCCC
+  4
+quitar_items 1 AAAA 1
+  0
+quitar_items 1 BBBB 1
+  0
+quitar_items 2 AAAA 5
+  4
+quitar_items 2 ZZZZ 1
+  0
+quitar_items 3 0000 1
+  0
+quitar_items 3 AAAA 1
+  0
+quitar_items 3 CCCC 10
+  6
+quitar_items 4 0000 5
+  1
+consultar_pos 1 1 1
+  NULL
+consultar_pos 2 2 1
+  0000
+consultar_pos 3 1 3
+  ZZZZ
+consultar_pos 4 1 2
+  AAAA
+escribir 1
+  NULL BBBB
+  NULL AAAA
+  2
+  AAAA 1
+  BBBB 1
+escribir 2
+  NULL ZZZZ
+  0000 NULL
+  2
+  0000 1
+  ZZZZ 1
+escribir 3
+  NULL NULL ZZZZ
+  AAAA NULL NULL
+  NULL 0000 NULL
+  3
+  0000 1
+  AAAA 1
+  ZZZZ 1
+escribir 4
+  NULL AAAA AAAA
+  NULL NULL NULL
+  2
+  AAAA 2
+quitar_prod CCCC
+compactar 1
+compactar 2
+redimensionar 1 2 1
+redimensionar 2 1 2
+redimensionar 3 1 1
+  error
+redimensionar 3 1 3
+redimensionar 4 2 1
+inventario
+  0000 2
+  AAAA 4
+  BBBB 1
+  ZZZZ 2
+quitar_items 1 AAAA 2
+  1
+quitar_items 1 BBBB 2
+  1
+quitar_items 2 0000 3
+  2
+quitar_items 2 ZZZZ 1
+  0
+quitar_items 3 0000 1
+  0
+quitar_items 3 AAAA 5
+  4
+quitar_items 3 CCCC 10
+  error
+quitar_items 3 ZZZZ 8
+  7
+quitar_items 4 AAAA 2
+  0
+escribir 1
+  NULL
+  NULL
+  0
+escribir 2
+  NULL NULL
+  0
+escribir 3
+  NULL NULL NULL
+  0
+escribir 4
+  NULL
+  NULL
+  0
+quitar_prod 0000
+quitar_prod AAAA
+quitar_prod BBBB
+quitar_prod ZZZZ
+inventario
+fin
+
